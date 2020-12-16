@@ -2,4 +2,4 @@
 A website to say Merry Christmas to our friends
 
 
-![ComingSoon](img/chriscomingsoon.jpg)
+![ComingSoon](img/chriscomingsoon.png)
