@@ -89,7 +89,7 @@ html {
             <div class="form">
               <input type="text" id="uname" name="name" autocomplete="off" required>
               <label for="name" class="label-name">
-                <span class="content-name">Your Name</span>
+                <span class="content-name">Enter Your Name</span>
               </label>
             </div>
             <div class="sharebuttondiv">
