@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}	 
+/*  1-9   not good 2,9 */
+
+#snow-fall{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  }
+
+
+
+ .slide-container {
+	 margin: auto;
+	 width: 20rem;
+	 text-align: center;
+	
+}
+ .wrapper {
+	 padding-top: 40%;
+}
+ .wrapper:focus {
+	 outline: 0;
+}
+ .clash-card {
+	 background: white;
+	 width: 250px;
+	 display: flexbox;
+	 border-radius: 19px;
+	 
+	 text-align: center;
+	 box-shadow: -1px 15px 30px -12px black;
+	 z-index: 999;
+}
+ .clash-card__image {
+	 position: relative;
+	 height: 230px;
+	 margin-bottom: 35px;
+	 border-top-left-radius: 14px;
+	 border-top-right-radius: 14px;
+}
+ .clash-card__image--barbarian {
+	 background: url('./img/santa-bg.jpg');
+}
+ .clash-card__image--barbarian img {
+	 width: 330px;
+	 position: absolute;
+	 top: -100px;
+	 left: -54px;
+}
+ .clash-card__level {
+	 text-transform: uppercase;
+	 font-size: 12px;
+	 font-weight: 700;
+	 margin-bottom: 3px;
+}
+ .clash-card__level--barbarian {
+	 color: #DE3163;
+}
+
+ .clash-card__unit-name {
+	font-size: 2rem;
+	 color: black;
+	 
+	 margin-bottom: 5px;
+	 font-family: "Lobster", cursive;
+	font-weight: lighter;
+}
+ .clash-card__unit-description {
+	 padding: 20px;
+	 margin-bottom: 10px;
+	 font-size: 2rem;
+	 color: black;
+	 
+	 margin-bottom: 5px;
+	 font-family: "Lobster", cursive;
+	font-weight: lighter;
+}
+.clash-card__from {
+	margin-bottom: 10px;
+	font-family: "Hebo";
+}
+ .clash-card__unit-stats--barbarian {
+	background: #82bb30;
+}
+ .clash-card__unit-stats--barbarian .one-third {
+	border-right: 1px solid #71a32a;
+}
+
+ .clash-card__unit-stats {
+	 color: white;
+	 font-weight: 700;
+	 border-bottom-left-radius: 14px;
+	 border-bottom-right-radius: 14px;
+}
+ .clash-card__unit-stats .one-third {
+	 width: 33%;
+	 float: left;
+	 padding: 20px 15px;
+}
+ .clash-card__unit-stats sup {
+	 position: absolute;
+	 bottom: 4px;
+	 font-size: 45%;
+	 margin-left: 2px;
+}
+ .clash-card__unit-stats .stat {
+	 position: relative;
+	 font-size: 24px;
+	 margin-bottom: 10px;
+}
+ .clash-card__unit-stats .stat-value {
+	 text-transform: uppercase;
+	 font-weight: 400;
+	 font-size: 12px;
+}
+ .clash-card__unit-stats .no-border {
+	 border-right: none;
+}
+ .clearfix:after {
+	 visibility: hidden;
+	 display: block;
+	 font-size: 0;
+	 content: " ";
+	 clear: both;
+	 height: 0;
+}
+/* Share btn  */
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:20px;
+	right:20px;
+	background-color:#3498DB ;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 5px 4px 5px black;
+	z-index: 200;
+}
+
+.my-float{
+	margin-top:22px;
+}
+.slide-container#card.active{
+	filter: blur(10px);
+
+}
+#shrbtn.active{
+	filter: blur(10px);
+}
+
+ 
+.intro {
+	background: url(img/chriscomingsoon.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+  }
+#popup{
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-40%);
+	width: 60%;
+	padding: 20px;
+	background: #FFF;
+	box-shadow: 0 5px 10px rgba(0,0,0,.30);
+	z-index: 2000;
+	visibility: hidden;
+	opacity: 0;
+	transition:0.5s;
+}
+#popup.active{
+	top: 50%;
+	visibility: visible;
+	opacity: 1;
+	transition:0.5s;
+}
+.form{
+	width: 100%;
+	position: relative;
+	height: 35px;
+	overflow: hidden;
+}
+.form input{
+	width: 100%;
+	height: 100%;
+	color: #3d414b;
+	padding-top: 12px;
+	border: none;
+	outline: none;
+	font-size: 15px;
+}
+.form label{
+	position: absolute;
+	bottom: 0px;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+	user-select: none;
+	pointer-events: none;
+	border-bottom: 1px solid black;
+}
+.form label::after{
+	content:"";
+	position: absolute;
+	left: 0px;
+	bottom: -1px;
+	height: 100%;
+	width: 100%;
+	border-bottom: 3px solid #5fa8d3;
+	transform: translateX(-100%);
+	transition: transform 0.6s ease;
+}
+.content-name{
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+	transition: all 0.6s ease;
+}
+.form input:focus + .label-name .content-name,
+ .form input:valid + .label-name.content-name {
+	transform: translateY(-150%);
+	font-size: 14px;
+	color: #5fa8d3;
+}
+.form input:focus .label-name::after,
+.form input:valid + .label-name::after{
+	transform: translateX(0%);
+}
+.wbutton {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 10px;
+	width: 50px;
+	font-size: 25px;
+	cursor: pointer;
+	border-radius: 12px;
+  }
+  .fbutton{
+	position: relative;
+	background-color: #4267B2; 
+	border: none;
+	left: 50px;
+	color: white;
+	padding: 10px;
+	font-size: 25px;
+	width: 50px;
+	cursor: pointer;
+	border-radius: 12px;
+  }
+  .sharebuttondiv{
+	margin: auto;
+	padding: 10px;
+  }
+
+  #snackbar {
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 16px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	bottom: 30px;
+	font-size: 17px;
+  }
+  
+  #snackbar.show {
+	visibility: visible;
+	z-index: 5000;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+	from {bottom: 0; opacity: 0;} 
+	to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+	from {bottom: 30px; opacity: 1;} 
+	to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+	from {bottom: 30px; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+  }
+
+  #movingsatna{
+	  position: absolute;
+  }
