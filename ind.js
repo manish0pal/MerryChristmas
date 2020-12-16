@@ -1,5 +1,8 @@
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+function callload(){
 tl.to(".intro", { y: "-100%", duration: 1.5, delay: 1.5},);
+}
+
 
 
 var queryString = decodeURIComponent(window.location.search);
@@ -28,7 +31,7 @@ function sendwhatsapp(){
                 showsnaker()
               }
               else{
-                      window.open('whatsapp://send?text=*Special Surprise only for you* :   '+window.location.href+"?"+uname)
+                      window.open('whatsapp://send?text=*Special Surprise for you* :   '+window.location.href+"?"+uname)
               }
 }
 function sendfacebook(){

@@ -8,16 +8,17 @@
     <link
     href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+
   <?php
-  $bg = array('img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg', 'img7.jpg','img8.jpg','img9.jpg' ); // array of filenames
+  $bg = array( 'img4.jpg', 'img3.jpg' , 'img7.jpg','img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg', 'img7.jpg','img8.jpg','img9.jpg' ); // array of filenames
 
   $i = rand(0, count($bg)-1); // generate random number size of the array
   $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
   
-?>
+?> 
 <style type="text/css">
 
 html { 
@@ -31,6 +32,11 @@ html {
   }
 </style>
 <link rel="stylesheet"   href="./indstyle.css">
+
+<div class="loader">
+        <div></div>
+    </div>
+
     <div class="slide-container" id="card">
   
         <div class="wrapper">
@@ -104,7 +110,8 @@ html {
                   <source src="./music/jingle-belwa.mp3" type="audio/mpeg">
                  
                 </audio>
-	<!-- script -->
+  <!-- script -->
+
   <script
   src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
   integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
@@ -112,6 +119,14 @@ html {
    <script src="./ind.js"></script>
     <script src="./particles.js"></script>
     <script src="./app.js"></script>
+      <script>
+        $(window).on('load',function(){
+            $(".loader").fadeOut(1000);
+            $(".slide-container").fadeIn(1000);
+            $(".intro").fadeIn(1000);
+            callload();
+        });
+    </script>
 </body>
 </html>
 
