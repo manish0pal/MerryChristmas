@@ -9,6 +9,8 @@
     href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 
@@ -30,6 +32,12 @@ html {
     background-size: cover;
     height: 100%;
   }
+#text{
+  font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
+   font-size: 35px;
+   color: red;
+   font-weight: 900;
+}
 </style>
 <link rel="stylesheet"   href="./indstyle.css">
 
@@ -45,12 +53,12 @@ html {
               <img src="./img/santa_crop.png" alt="barbarian" />
             </div>
             
-            <div class="clash-card__unit-name">Merry Christmas 
+            <div class="clash-card__unit-name" id="text">Merry Christmas 
               </div>
-            <div class="clash-card__unit-description">
+            <div class="clash-card__unit-description" id="text">
               in advance
             </div>
-            <div class="clash-card__from">
+            <div class="clash-card__from" style="font-size: 25px;">
               from
             </div>
             <div  id = "setUname"class="clash-card__level clash-card__level--barbarian"></div>
@@ -87,9 +95,9 @@ html {
 
           <div id="popup">
             <div class="form">
-              <input type="text" id="uname" name="name" autocomplete="off" required>
+              <input type="text" placeholder="Enter Your Name" id="uname" name="name" autocomplete="off" required>
               <label for="name" class="label-name">
-                <span class="content-name">Enter Your Name</span>
+                
               </label>
             </div>
             <div class="sharebuttondiv">

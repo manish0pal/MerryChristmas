@@ -31,7 +31,8 @@ function sendwhatsapp(){
                 showsnaker()
               }
               else{
-                      window.open('whatsapp://send?text=*Special Surprise for you* :   '+window.location.href+"?"+uname)
+
+                      window.open('whatsapp://send?text=*Special Surprise for you* :   '+'http://manishpal.epizy.com/christmas/?'+uname)
               }
 }
 function sendfacebook(){
@@ -44,7 +45,7 @@ function sendfacebook(){
                 showsnaker()
               }
               else{
-                      window.open("https://www.facebook.com/sharer/sharer.php?u="+window.location.href+"?"+uname)
+                      window.open("https://www.facebook.com/sharer/sharer.php?u="+'http://manishpal.epizy.com/christmas/?'+uname)
               }
 }
 function showsnaker(){
